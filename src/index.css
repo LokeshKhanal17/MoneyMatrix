@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+        @apply transition-colors duration-200;
+      }
+    
+      .dark body {
+        @apply bg-dark-bg text-dark-text;
+      }
+  }
+  
+  @layer components {
+    .card {
+        @apply bg-white dark:bg-dark-card shadow-lg dark:shadow-xl rounded-lg transition-colors duration-200;
+      }
+    
+      .input {
+        @apply bg-white dark:bg-dark-secondary border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-200;
+      }
+    
+      .button-primary {
+        @apply bg-primary hover:bg-primary-dark dark:bg-primary-dark dark:hover:bg-primary text-white transition-colors duration-200;
+      }
+    .gradient-text {
+      @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
+    }
+    
+    .nav-link {
+      @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+    }
+    
+    .button-primary {
+      @apply inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 transform hover:-translate-y-1 transition-all duration-200;
+    }
+  }
+  .theme-transition {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Dark mode scrollbar */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .dark ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+  
+  /* Dark mode selection */
+  .dark ::selection {
+    background-color: #2563eb;
+    color: #fff;
+  }
+  
+  /* Dark mode focus rings */
+  .dark *:focus {
+    @apply ring-offset-dark-bg;
+  }

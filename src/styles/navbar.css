@@ -1,0 +1,12 @@
+.nav-scroll {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-scroll.hidden {
+    transform: translateY(-100%);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+  }
