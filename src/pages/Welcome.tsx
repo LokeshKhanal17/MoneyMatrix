@@ -99,9 +99,9 @@ const Welcome: React.FC = () => {
             variants={containerVariants}
           >
             <motion.div variants={itemVariants}>
-              <ChartPieIcon className="h-16 w-16 text-blue-600 dark:text-blue-400 mx-auto mb-8" />
+              <ChartPieIcon className="h-16 w-16 text-green-600 dark:text-green-400 mx-auto mb-8" />
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                <span className="bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-600 to-green-400 dark:from-green-400 dark:to-green-300 bg-clip-text text-transparent">
                   Simplify Your Finances
                 </span>
               </h1>
@@ -113,7 +113,7 @@ const Welcome: React.FC = () => {
             <motion.div variants={itemVariants}>
               <Link
                 to="/signup" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 transition duration-150 ease-in-out transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-150 ease-in-out transform hover:-translate-y-1"
               >
                 Get Started Free
                 <ArrowSmallRightIcon className="ml-2 h-5 w-5" />
@@ -211,7 +211,7 @@ const Welcome: React.FC = () => {
                 transition={{ delay: index * 0.5,type: 'spring',stiffness: 140 }}
               >
                 <div className="bg-gray-300 rounded-xl p-8 text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-4">
+                  <div className="text-4xl font-bold text-green-600 mb-4">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -286,7 +286,7 @@ const Welcome: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 dark:bg-blue-700 transition-colors duration-300">
+      <section className="py-20 bg-green-600 dark:bg-green-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -301,7 +301,7 @@ const Welcome: React.FC = () => {
             </p>
             <Link
               to="/signup"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-blue-600 bg-white hover:bg-gray-100 transition duration-150 ease-in-out transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-green-600 bg-white hover:bg-gray-100 transition duration-150 ease-in-out transform hover:-translate-y-1"
             >
               Get Started Free
               <ArrowSmallRightIcon className="ml-2 h-5 w-5" />
@@ -316,7 +316,7 @@ const Welcome: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <ChartPieIcon className="h-8 w-8 text-blue-400" />
+                <ChartPieIcon className="h-8 w-8 text-green-400" />
                 <span className="ml-2 text-xl font-bold">Money Matrix</span>
               </div>
               <p className="text-gray-400">
@@ -391,11 +391,11 @@ const Welcome: React.FC = () => {
                 <input
                     type="email"
                     placeholder="Enter your email"
-                    className="p-4 w-full md:w-auto flex-grow rounded-lg border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200 ease-in-out"
+                    className="p-4 w-full md:w-auto flex-grow rounded-lg border border-gray-300 text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200 ease-in-out"
                 />
                 <button
                     type="submit"
-                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold text-lg rounded-lg shadow-md hover:shadow-lg hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300 ease-in-out"
+                    className="px-8 py-4 bg-gradient-to-r from-green-500 to-green-700 text-white font-semibold text-lg rounded-lg shadow-md hover:shadow-lg hover:from-green-600 hover:to-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 ease-in-out"
                 >
                     Sign Up
                 </button>

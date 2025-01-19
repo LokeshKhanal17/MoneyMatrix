@@ -45,7 +45,7 @@ const SignIn: React.FC = () => {
         <div className="flex items-center justify-center p-8 lg:p-12">
             <div className="w-full max-w-md space-y-8">
             <div className='flex justify-center gap-4'>
-                <ChartPieIcon className="h-10 w-10 text-blue-600" />
+                <ChartPieIcon className="h-10 w-10 text-green-600" />
                 <h2 className="mt-8 text-2xl font-bold text-gray-900 dark:text-gray-200">
                 Hello, Welcome Back!{' username'}
                 </h2>
@@ -83,7 +83,7 @@ const SignIn: React.FC = () => {
                     <input
                         {...register('email')}
                         type="email"
-                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
                     />
                     {errors.email && (
                         <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -99,7 +99,7 @@ const SignIn: React.FC = () => {
                     <input
                         {...register('password')}
                         type={showPassword ? 'text' : 'password'}
-                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
                     />
                     <button
                         type="button"
@@ -123,7 +123,7 @@ const SignIn: React.FC = () => {
                     <input
                         {...register('rememberMe')}
                         type="checkbox"
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
                     />
                     <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900 dark:text-gray-200">
                         Remember me
@@ -131,7 +131,7 @@ const SignIn: React.FC = () => {
                     </div>
 
                     <div className="text-sm">
-                    <Link to="/forgot-password" className="font-medium text-blue-600 hover:text-blue-500">
+                    <Link to="/forgot-password" className="font-medium text-green-600 hover:text-green-500">
                         Forgot your password?
                     </Link>
                     </div>
@@ -142,7 +142,7 @@ const SignIn: React.FC = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                     disabled={isLoading}
                     >
                     {isLoading ? 'Signing in...' : 'Sign in'}
@@ -152,7 +152,7 @@ const SignIn: React.FC = () => {
 
                 <p className="mt-6 text-center text-sm text-gray-500">
                 Not a member?{' '}
-                <Link to="/signup" className="font-medium text-blue-600 hover:text-blue-500">
+                <Link to="/signup" className="font-medium text-green-600 hover:text-green-500">
                     Sign up now
                 </Link>
                 </p>
@@ -161,10 +161,10 @@ const SignIn: React.FC = () => {
         </div>
 
         {/* Right side - Animation section */}
-        <div className="hidden lg:block relative bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 lg:m-4">
+        <div className="hidden lg:block relative bg-gradient-to-br from-green-50 via-green-100 to-green-200 lg:m-4">
             <div className="absolute inset-0 overflow-hidden">
             {/* Floating Cards Container */}
-            <div className="absolute inset-0 flex items-center justify-center rounded-lg ">
+            <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
                 className="flex flex-col gap-6 w-[400px]"
                 animate={{ y: [-800, 800] }}
@@ -183,7 +183,9 @@ const SignIn: React.FC = () => {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <h3 className="text-gray-500 font-medium mb-2 text-lg">GROWTH</h3>
-                        <div className="text-5xl font-bold text-gray-900 mb-2">+21.35%</div>
+                        <div className="text-5xl font-bold text-gray-900 mb-2">+{
+                            Math.floor(Math.random() * 100)/2
+                        }%</div>
                         <p className="text-gray-600 text-sm">
                         This significant increase in growth highlights the effectiveness of our recent strategies.
                         </p>
@@ -209,7 +211,9 @@ const SignIn: React.FC = () => {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <h3 className="text-gray-500 font-medium mb-2 text-lg">ENGAGEMENT</h3>
-                        <div className="text-5xl font-bold text-gray-900 mb-2">+78.12%</div>
+                        <div className="text-5xl font-bold text-gray-900 mb-2">+{
+                        Math.floor(Math.random() * 100)
+                        }%</div>
                         <p className="text-gray-600 text-sm">
                         Significant increase in engagement rate from our latest content strategy.
                         </p>
@@ -217,7 +221,7 @@ const SignIn: React.FC = () => {
                         {[65, 85, 45, 75, 55, 90].map((height, i) => (
                             <motion.div
                             key={i}
-                            className="w-8 bg-blue-500 rounded-t-lg"
+                            className="w-8 bg-green-500 rounded-t-lg"
                             initial={{ height: 0 }}
                             animate={{ height: `${height}%` }}
                             transition={{
@@ -231,6 +235,24 @@ const SignIn: React.FC = () => {
                         ))}
                         </div>
                     </motion.div>
+                    {/*testimonals card*/ }
+                    <motion.div
+                     className='bg-white rounded-2xl p-8 shadow-lg'
+                     whileHover={{scale:1.05}}
+                     transition={{type:'spring',stiffness:300}}>
+                        <h3 className='text-gray-500 font-medium mb-2 text-lg'>Testimonials</h3>
+                        <div className='flex items-center gap-4'>
+                            <div className='w-12 h-12 rounded-full bg-gray-200'>
+                                <img src='https://cdn.dribbble.com/userupload/9650948/file/original-56d03ef43fc6d79ead59b855e47dc194.jpg?format=webp&resize=700x525&vertical=center' alt='profile' className='w-12 h-12 rounded-full'/>
+                            </div>
+                            <div>
+                                <h4 className='text-gray-900 font-semibold'>Steve hopes</h4>
+                                <p className='text-gray-600 text-sm'>
+                                    "This is the best budget planner I have ever used"
+                                </p>
+                            </div>
+                        </div>
+                     </motion.div>
                     </React.Fragment>
                 ))}
                 </motion.div>
@@ -238,8 +260,8 @@ const SignIn: React.FC = () => {
             </div>
 
             {/* Gradient Overlays */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-blue-50 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-blue-100 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-green-50 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-green-100 to-transparent" />
         </div>
     </div>
     </div>

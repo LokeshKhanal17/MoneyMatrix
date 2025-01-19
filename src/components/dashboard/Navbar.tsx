@@ -36,8 +36,8 @@ const Navbar: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link to="/" className="flex items-center space-x-2">
-              <ChartPieIcon className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900 dark:text-gray-100">BudgetPlanner</span>
+              <ChartPieIcon className="h-8 w-8 text-green-600" />
+              <span className="text-xl font-bold text-gray-900 dark:text-gray-100">Money Matrix</span>
             </Link>
           </motion.div>
 
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
               >
                 <Link
                   to="/signup"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
                 >
                   Get Started
                 </Link>
