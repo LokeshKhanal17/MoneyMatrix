@@ -1,6 +1,36 @@
 <<<<<<< HEAD
-# MoneyMatrix
-Money matrix
+# Money Matrix 💰
+
+Money Matrix is a modern, intuitive financial management application designed to help users take control of their personal finances with precision and ease. Built with React and powered by real-time analytics, this app transforms complex financial data into actionable insights.
+
+## Key Features
+
+- 📊 Interactive Dashboard: Visual representation of your financial health at a glance
+- 💵 Income & Expense Tracking: Smart categorization and monitoring of all financial transactions
+- 🤝 Shared Expense Management: Easily split and track shared costs with roommates or partners
+- 🎯 Goal Setting & Tracking: Set and monitor financial goals with progress visualization
+- 📈 Intelligent Analytics: Advanced insights into spending patterns and financial trends
+- 🔔 Smart Notifications: Stay informed about bills, budget limits, and financial goals
+
+## Why Money Matrix?
+
+Money Matrix isn't just another budgeting tool – it's your personal financial command center. Whether you're saving for a big purchase, managing shared household expenses, or simply wanting better control over your finances, Money Matrix provides the clarity and tools you need to make informed financial decisions.
+
+## Tech Stack
+
+- Frontend: React.js with Tailwind CSS
+- Animations: Framer Motion
+- State Management: Redux
+- Authentication: OAuth integration
+- Visualization: Recharts
+
+## Getting Started
+
+[Installation and setup instructions will go here]
+
+## Contributing
+
+We welcome contributions! See our contributing guide for more details.
 =======
 # React + TypeScript + Vite
 
