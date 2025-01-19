@@ -2,6 +2,7 @@ import Welcome from '../../pages/Welcome';
 import SignIn from '../../pages/SignIn';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import SignUp from '../../pages/SignUp';
 
 // const router = createBrowserRouter([
 //     {
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
         <Routes location={location}>
           <Route path="/" element={<Welcome />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </motion.div>
     </AnimatePresence>

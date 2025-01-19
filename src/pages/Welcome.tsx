@@ -317,7 +317,7 @@ const Welcome: React.FC = () => {
             <div>
               <div className="flex items-center mb-4">
                 <ChartPieIcon className="h-8 w-8 text-blue-400" />
-                <span className="ml-2 text-xl font-bold">BudgetPlanner</span>
+                <span className="ml-2 text-xl font-bold">Money Matrix</span>
               </div>
               <p className="text-gray-400">
                 Making financial management simple and effective for everyone.
@@ -345,7 +345,7 @@ const Welcome: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li className="text-gray-400">support@budgetplanner.com</li>
+                <li className="text-gray-400">support@moneymatrix.com</li>
                 <li className="text-gray-400">1-800-BUDGET</li>
                 <li className="text-gray-400">123 Finance Street</li>
                 <li className="text-gray-400">New York, NY 10001</li>
