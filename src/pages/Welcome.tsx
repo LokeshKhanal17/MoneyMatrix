@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
@@ -68,6 +68,8 @@ const howItWorks = [
 ];
 
 const Welcome: React.FC = () => {
+  const [isLoading, setIsLoading] = React.useState(true);
+  
  // const { theme } = useTheme();
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -85,9 +87,30 @@ const Welcome: React.FC = () => {
       transition: { duration: 1 }
     }
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }
+  , []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+    <AnimatePresence>
+      {isLoading? 
+      (<motion.div 
+          className="fixed inset-0 bg-black flex items-center justify-center"
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="text-green-500 text-4xl font-bold"
+          >
+            MoneyMatrix
+          </motion.div>
+        </motion.div>):
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
         <Navbar />
       {/* Hero Section */}
       <div className="relative pt-8 bg-white dark:bg-gray-800 dark:text-gray-50 ">
@@ -478,6 +501,10 @@ const Welcome: React.FC = () => {
         </svg>
       </motion.button>
     </div>
+
+        }
+    
+    </AnimatePresence>
   );
 };
 

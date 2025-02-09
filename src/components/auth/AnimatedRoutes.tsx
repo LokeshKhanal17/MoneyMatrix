@@ -30,7 +30,9 @@ const AnimatedRoutes = () => {
         transition={{ duration: 0.3 }}
       >
         <Routes location={location}>
+
           <Route path="/" element={<Welcome />} />
+          {/* <Route path='/test' element={<LogoFetcher name="Adobe"  className="w-12 h-12 rounded-full" alt="Adobe logo" />}/> */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path='/dashboard' element={<Dashboard/> }></Route>

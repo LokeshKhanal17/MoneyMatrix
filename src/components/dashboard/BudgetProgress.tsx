@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Switch } from '@headlessui/react';
-import { useTheme } from '../../context/ThemeContext';
+//import { useTheme } from '../../context/ThemeContext';
 
 interface BudgetProgressProps {
   expensePercentage: number;
@@ -14,7 +14,7 @@ const BudgetProgress: React.FC<BudgetProgressProps> = ({
 }) => {
   const [isSavingsMode, setIsSavingsMode] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const { theme } = useTheme();
+  //const { theme } = useTheme();
 
   const circumference = 2 * Math.PI * 120;
   const currentPercentage = isSavingsMode ? savingPercentage : expensePercentage;
